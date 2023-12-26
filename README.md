@@ -1,75 +1,18 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 + @antfu/eslint-config
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Minimal demo project for reproducing an eslint error:
 
-## Setup
+> Cannot write file ~/eslint.config.js' because it would overwrite input file.
 
-Make sure to install the dependencies:
-
+Step to reproduce an error:
+- Clone the project and install dependencies
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+git clone https://github.com/juretopolak/nuxt-antfu-eslint.git
+cd nuxt-antfu-eslint
+pnpm i
+pnpm dev
 ```
+- Open the file ./server/api/test.get.ts with VSCode
+- TS error appear in ./server/tsconfig.json
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Error only appears when any file in the ./server directory is opened.
