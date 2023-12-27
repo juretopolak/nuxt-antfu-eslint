@@ -2,7 +2,9 @@
 
 Minimal demo project for reproducing an eslint error:
 
-> Cannot write file ~/eslint.config.js' because it would overwrite input file.
+> Cannot write file '~/eslint.config.js' because it would overwrite input file.
+
+![Screenshot](https://i.postimg.cc/NfnT5f5R/Screenshot-2023-12-27-at-11-12-18.png)
 
 Step to reproduce an error:
 - Clone the project and install dependencies
@@ -15,4 +17,4 @@ pnpm dev
 - Open the file ./server/api/test.get.ts with VSCode
 - TS error appear in ./server/tsconfig.json
 
-Error only appears when any file in the ./server directory is opened.
+**Error only appears when any file in the ./server directory is opened!**
